@@ -24,8 +24,9 @@
 
     <Button
         android:id="@+id/btn_view_js"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:textSize="15dp"
         android:layout_marginEnd="5dp"
         android:text="內容"
         app:layout_constraintEnd_toStartOf="@+id/btn_download_js"
@@ -33,8 +34,9 @@
 
     <Button
         android:id="@+id/btn_download_js"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:textSize="15dp"
         android:layout_marginEnd="5dp"
         android:text="下載"
         app:layout_constraintEnd_toStartOf="@+id/Js_ai"
@@ -42,8 +44,9 @@
 
     <Button
         android:id="@+id/Js_ai"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:textSize="15dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"

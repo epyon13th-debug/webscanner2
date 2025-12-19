@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#009688"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/url_In"
+        android:layout_width="294dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textColor="#9C27B0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/url_Past"
+        android:layout_width="119dp"
+        android:layout_height="41dp"
+        android:text="載入網頁"
+        app:layout_constraintEnd_toEndOf="@+id/url_In"
+        app:layout_constraintStart_toStartOf="@+id/url_In"
+        app:layout_constraintTop_toBottomOf="@+id/url_In" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/js_Scanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:maxWidth="32dp"
+        android:maxHeight="32dp"
+        app:backgroundTint="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="200dp"
+        app:rippleColor="@color/design_default_color_error"
+        app:srcCompat="@drawable/js" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/css_Scanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#CDDC39"
+        android:clickable="true"
+        android:maxWidth="32dp"
+        android:maxHeight="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/js_Scanner"
+        app:layout_constraintTop_toTopOf="@+id/js_Scanner"
+        app:maxImageSize="50dp"
+        app:srcCompat="@drawable/css" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/img_Scanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="#FF5722"
+        android:clickable="true"
+        android:src="@drawable/pic"
+        android:tint="#009688"
+        app:layout_constraintBottom_toBottomOf="@+id/css_Scanner"
+        app:layout_constraintStart_toEndOf="@+id/css_Scanner"
+        app:layout_constraintTop_toTopOf="@+id/css_Scanner"
+        app:maxImageSize="65dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/api_Keyset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#FFEB3B"
+        android:clickable="true"
+        android:src="@drawable/api"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/web_View"
+        app:layout_constraintTop_toTopOf="@+id/img_Scanner"
+        app:maxImageSize="55dp"
+        tools:srcCompat="@drawable/api" />
+
+    <RadioGroup
+        android:id="@+id/ez_chose"
+        android:layout_width="250dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/url_Past"
+        app:layout_constraintStart_toStartOf="@+id/url_Past"
+        app:layout_constraintTop_toBottomOf="@+id/url_Past">
+
+        <RadioButton
+            android:id="@+id/ez_Url1"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#2196F3"
+            android:text="明星科技大學" />
+
+        <RadioButton
+            android:id="@+id/ez_Url2"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#FFC107"
+            android:text="巴哈姆特電玩資訊站" />
+
+        <RadioButton
+            android:id="@+id/ez_Url3"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#9C27B0"
+            android:text="聯合新聞網" />
+    </RadioGroup>
+
+    <WebView
+        android:id="@+id/web_View"
+        android:layout_width="385dp"
+        android:layout_height="375dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </WebView>
+</androidx.constraintlayout.widget.ConstraintLayout>
