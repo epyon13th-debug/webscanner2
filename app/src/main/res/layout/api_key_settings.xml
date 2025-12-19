@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E79B9B"
     tools:context=".ai.ApiKeySettingsActivity">
 
     <EditText
@@ -27,9 +26,22 @@
         android:id="@+id/saveApiKeyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:text="儲存"
+        app:layout_constraintBottom_toBottomOf="@+id/clearApiKeyButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/clearApiKeyButton"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/apiKeyInput" />
+
+    <Button
+        android:id="@+id/clearApiKeyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除"
+        app:layout_constraintBottom_toBottomOf="@+id/saveApiKeyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/saveApiKeyButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

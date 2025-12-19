@@ -75,4 +75,21 @@ class ApiKeySettingsActivity : AppCompatActivity() {
 
         finish()
     }
+
+    private fun clearApiKey() {
+        val prefs = getEncryptedSharedPreferences(this)
+
+        if (prefs.contains(API_KEY_NAME)) {
+            prefs.edit()
+                .remove(API_KEY_NAME)
+                .apply()
+
+            apiKeyInput.setText("")
+
+            Toast.makeText(this, "API 金鑰已清除", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "API 金鑰原本就是空的", Toast.LENGTH_SHORT).show()
+        }
+        finish()
+    }
 }
