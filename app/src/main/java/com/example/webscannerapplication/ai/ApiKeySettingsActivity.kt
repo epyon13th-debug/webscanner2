@@ -16,6 +16,7 @@ import com.example.webscannerapplication.R
 class ApiKeySettingsActivity : AppCompatActivity() {
     private lateinit var apiKeyInput: EditText
     private lateinit var saveButton: Button
+    private lateinit var clearApiKeyButton: Button
 
     companion object {
         private const val PREFS_FILE_NAME = "secure_prefs"
@@ -34,10 +35,14 @@ class ApiKeySettingsActivity : AppCompatActivity() {
 
         apiKeyInput = findViewById(R.id.apiKeyInput)
         saveButton = findViewById(R.id.saveApiKeyButton)
+        clearApiKeyButton = findViewById(R.id.clearApiKeyButton)
 
         loadApiKey()
         saveButton.setOnClickListener {
             saveApiKey(apiKeyInput.text.toString().trim())
+        }
+        clearApiKeyButton.setOnClickListener {
+            clearApiKey()
         }
     }
 

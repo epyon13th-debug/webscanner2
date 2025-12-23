@@ -12,6 +12,7 @@
         android:id="@+id/url_In"
         android:layout_width="294dp"
         android:layout_height="152dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
@@ -19,6 +20,7 @@
         android:inputType="textMultiLine"
         android:textColor="#9C27B0"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/web_View"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -96,9 +98,10 @@
         android:id="@+id/ez_chose"
         android:layout_width="250dp"
         android:layout_height="79dp"
+        android:layout_marginStart="90dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="@+id/url_Past"
-        app:layout_constraintStart_toStartOf="@+id/url_Past"
+        app:layout_constraintStart_toEndOf="@+id/web_View"
         app:layout_constraintTop_toBottomOf="@+id/url_Past">
 
         <RadioButton
@@ -127,7 +130,7 @@
         android:id="@+id/web_View"
         android:layout_width="385dp"
         android:layout_height="375dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
